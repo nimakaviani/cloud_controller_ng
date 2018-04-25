@@ -40,11 +40,15 @@ module CloudController
       end
 
       def cp_r_to_blobstore(*args)
-        error_handling { wrapped_client.cp_r_to_blobstore(*args) }
+        error_handling {
+          wrapped_client.cp_r_to_blobstore(*args)
+        }
       end
 
       def download_from_blobstore(*args)
-        error_handling { wrapped_client.download_from_blobstore(*args) }
+        error_handling {
+          wrapped_client.download_from_blobstore(*args)
+        }
       end
 
       def delete(*args)
